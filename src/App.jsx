@@ -4,6 +4,7 @@ import Hero from "./components/hero/Hero";
 import Filtering from "./components/products/Filtering/Filtering";
 import Sorting from "./components/products/Sorting/Sorting";
 import Products from "./components/products/productsGrid/Products";
+import Footer from "./components/Footer/footer";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
