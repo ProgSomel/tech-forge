@@ -5,25 +5,27 @@ import Filtering from "./components/products/Filtering/Filtering";
 import Sorting from "./components/products/Sorting/Sorting";
 import Products from "./components/products/productsGrid/Products";
 import Footer from "./components/Footer/footer";
+import ProductProvider from "./provider/ProductProvider";
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <main class="max-w-6xl mx-auto px-4 py-12 space-y-10">
-        <Hero />
+      <ProductProvider>
+        <Navbar />
+        <main class="max-w-6xl mx-auto px-4 py-12 space-y-10">
+          <Hero />
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <Filtering />
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <Filtering />
 
-          <div class="md:col-span-3">
-            <Sorting />
-
-            <Products />
+            <div class="md:col-span-3">
+              <Sorting />
+              <Products />
+            </div>
           </div>
-        </div>
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </ProductProvider>
     </>
   );
 }
